@@ -4,8 +4,6 @@ RSA一站式解决办法
 ## 使用指南：
 **注意：若使用`Xcode8`及以上请在`Capabilities`中将`KeyChain sharing`设置为`YES`**。
 
-![](/Users/liuning1/Desktop/QQ20161104-0@2x.png)
-
 本工具类直接使用`.pem`文件中字符串类型的密钥，无需导入p12、der之类的证书文件。
 
 本工具类能实现:
