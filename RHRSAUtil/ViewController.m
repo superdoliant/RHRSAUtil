@@ -89,7 +89,7 @@
     for (NSInteger i=0; i<=ceilf(string.length / n); i++){
         NSString *subString = [string substringWithRange:NSMakeRange(i * n, MIN(n, string.length - i * 245))];
         NSData *encryptData = [IPNRSAUtil encryptData:[subString dataUsingEncoding:NSUTF8StringEncoding]  publicKey:publickey];
-        // 分段加密需要拼接加密后的data数据，不要将data转换成字符串再，这样会导致结果错误。
+        // 分段加密需要拼接加密后的data数据，不要将data转换成字符串再拼接，这样会导致结果错误。
         [preData appendData:encryptData];
     }
     NSData *finalData = [[NSData alloc] initWithData:preData];
